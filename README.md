@@ -4,20 +4,22 @@
 
 ## Running locally
 
+- Clone repository
 ```
 git clone https://github.com/kshitijv256/coin_toss.git
 ```
-
+- Install dependencies
 ```
 npm install
 ```
-
+- Run development server
 ```
 npm run dev
 ```
+- Provide authrizatiob for ssl certificate if asked.
 
 
-### Steps to create from scratch
+## Steps to create from scratch
 
 - Create contract with soroban cli.
 - Deploy your contracts and add details to deployments.json.
