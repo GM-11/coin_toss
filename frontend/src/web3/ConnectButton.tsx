@@ -8,14 +8,12 @@ export const ConnectButton = () => {
   const browserWallets = sorobanContext.connectors;
   if (!activeAccount)
     return (
-      <div className="w-full p-4">
-        {!activeAccount && (
-          <p className="text-white text-lg mb-2">Connect to a wallet</p>
-        )}
+      <div className="text-white justify-center align-middle flex flex-col">
+        {!activeAccount && <p className="">Connect wallet to continue</p>}
         {!activeAccount &&
           browserWallets.map((w) => (
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              className="bg-white rounded-full hover:bg-slate-50 p-4 text-black"
               key={w.name}
               onClick={() => {
                 setActiveConnectorAndConnect && setActiveConnectorAndConnect(w);
@@ -28,10 +26,7 @@ export const ConnectButton = () => {
     );
 
   return (
-    <div className="w-full p-4 text-white text-lg flex flex-col gap-2">
-      <p>
-        Active Chain: <b>{activeChain?.name}</b>
-      </p>
+    <div className="w-full p-4 border-b-black border-t-transparent border-r-transparent border-l-transparent border-2 text-white text-lg flex flex-col align-middle justify-center">
       <p>
         Wallet Address: <b>{address}</b>
       </p>
